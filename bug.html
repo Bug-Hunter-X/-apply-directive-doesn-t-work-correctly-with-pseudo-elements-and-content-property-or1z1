@@ -1,0 +1,9 @@
+This bug occurs when using Tailwind CSS's `@apply` directive with directives that modify the `content` property, such as `before` or `after`.  The `content` property is not correctly applied when using `@apply` in conjunction with these directives. For example:
+
+```html
+<div class="relative">
+  <div class="absolute top-0 left-0 @apply before:content-['✨']"></div>
+</div>
+```
+
+This might result in the `before` pseudo-element not showing the expected content. 
