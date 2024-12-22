@@ -1,0 +1,7 @@
+The solution is to apply the `content` property separately, outside the `@apply` directive. This allows Tailwind to correctly process and apply the content.
+
+```html
+<div class="relative">
+  <div class="absolute top-0 left-0 before:content-['✨']"></div>
+</div>
+```
